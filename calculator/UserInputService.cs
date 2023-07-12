@@ -1,8 +1,15 @@
 namespace calculator;
 
-public class UserInputService
+public interface IUserInputService
 {
-    public UserInput TakeUserInput()
+    public UserInput getUserInput();
+}
+
+public class UserInputService: IUserInputService
+{
+ 
+
+    public UserInput getUserInput()
     {
         UserInput userInput = new UserInput();
 
