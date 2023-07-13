@@ -50,14 +50,7 @@ public class CalculatorLogic
     
     private void Divide(UserInput userInput)
     {
-        if(userInput.secondInput != 0) 
-        {
-            decimal result = userInput.firstInput / userInput.secondInput;
-            Console.WriteLine(result);
-        }
-        else 
-        {
-            Console.WriteLine("Division by zero is not allowed!");
-        }
+        decimal result = userInput.firstInput / userInput.secondInput;
+        Console.WriteLine(result);
     }
 }

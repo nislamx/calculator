@@ -46,6 +46,12 @@ public class UserInputService: IUserInputService
             Console.WriteLine("Please put in your second number matey");
             string secondInputAsString = Console.ReadLine();
 
+            if (secondInputAsString == "0" && userInput.operation == Operations.Divide)
+            {
+                Console.WriteLine("You cannot divide by 0");
+                continue;
+            }
+
             if (decimal.TryParse(secondInputAsString, out decimal secondInputAsNum))
             {
                 userInput.secondInput = secondInputAsNum;
