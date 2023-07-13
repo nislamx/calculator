@@ -9,48 +9,53 @@ public class CalculatorLogic
         _userInputService = userInputService;
     }
 
-    public void Calculate()
+    public decimal Calculate()
     {
         UserInput userInput = _userInputService.getUserInput();
 
         switch (userInput.operation)
         {
             case Operations.Add:
-                Add(userInput);
-                break;
+                return Add(userInput);
             case Operations.Subtract:
-                Subtract(userInput);
-                break;
+                return Subtract(userInput);
             case Operations.Multiply:
-                Multiply(userInput);
-                break;
+                return Multiply(userInput);
             case Operations.Divide:
-                Divide(userInput);
-                break;
+                return Divide(userInput);
+            default:
+                throw new ArgumentException($"Unsupported operation: {userInput.operation}");
         }
     }
 
-    private void Add(UserInput userInput)
+    public decimal Add(UserInput userInput)
     {
         decimal result = userInput.firstInput + userInput.secondInput;
         Console.WriteLine(result);
+        return result;
     }
 
-    private void Subtract(UserInput userInput)
+    private decimal Subtract(UserInput userInput)
     {
         decimal result = userInput.firstInput - userInput.secondInput;
         Console.WriteLine(result);
+        return result;
+
     }
     
-    private void Multiply(UserInput userInput)
+    private decimal Multiply(UserInput userInput)
     {
         decimal result = userInput.firstInput * userInput.secondInput;
         Console.WriteLine(result);
+        return result;
+
     }
     
-    private void Divide(UserInput userInput)
+    private decimal Divide(UserInput userInput)
     {
         decimal result = userInput.firstInput / userInput.secondInput;
         Console.WriteLine(result);
+        return result;
+
     }
 }
