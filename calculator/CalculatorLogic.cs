@@ -32,19 +32,19 @@ public class CalculatorLogic
 
     private void Add(UserInput userInput)
     {
-        int result = userInput.firstInput + userInput.secondInput;
+        decimal result = userInput.firstInput + userInput.secondInput;
         Console.WriteLine(result);
     }
 
     private void Subtract(UserInput userInput)
     {
-        int result = userInput.firstInput - userInput.secondInput;
+        decimal result = userInput.firstInput - userInput.secondInput;
         Console.WriteLine(result);
     }
     
     private void Multiply(UserInput userInput)
     {
-        int result = userInput.firstInput * userInput.secondInput;
+        decimal result = userInput.firstInput * userInput.secondInput;
         Console.WriteLine(result);
     }
     
@@ -52,7 +52,7 @@ public class CalculatorLogic
     {
         if(userInput.secondInput != 0) 
         {
-            int result = userInput.firstInput / userInput.secondInput;
+            decimal result = userInput.firstInput / userInput.secondInput;
             Console.WriteLine(result);
         }
         else 

@@ -32,7 +32,7 @@ public class UserInputService: IUserInputService
             Console.WriteLine("Please put in your first input which should be a number");
             string firstInputAsString = Console.ReadLine();
 
-            if (int.TryParse(firstInputAsString, out int firstInputAsNum))
+            if (decimal.TryParse(firstInputAsString, out decimal firstInputAsNum))
             {
                 userInput.firstInput = firstInputAsNum;
                 break; //Exit loop if input is valid
@@ -46,7 +46,7 @@ public class UserInputService: IUserInputService
             Console.WriteLine("Please put in your second number matey");
             string secondInputAsString = Console.ReadLine();
 
-            if (int.TryParse(secondInputAsString, out int secondInputAsNum))
+            if (decimal.TryParse(secondInputAsString, out decimal secondInputAsNum))
             {
                 userInput.secondInput = secondInputAsNum;
                 break; //Exit loop if input is valid

@@ -11,7 +11,7 @@ public enum Operations
 
 public class UserInput
 {
-    public int firstInput { get; set; }
-    public int secondInput { get; set; }
+    public decimal firstInput { get; set; }
+    public decimal secondInput { get; set; }
     public Operations operation { get; set; }
 }
