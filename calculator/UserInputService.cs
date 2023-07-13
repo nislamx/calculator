@@ -18,7 +18,7 @@ public class UserInputService: IUserInputService
             Console.WriteLine("What operation would you like to perform. Please type one of add / subtract / divide / multiply");
             string operationInput = Console.ReadLine();
 
-            if (Enum.TryParse(operationInput, true, out Operations operation))
+            if (Enum.TryParse(operationInput, true, out Operations operation) && !int.TryParse(operationInput, out int number))
             {
                 userInput.operation = operation;
                 break; //Exit loop if input is valid
